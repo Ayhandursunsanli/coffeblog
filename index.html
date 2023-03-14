@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#"><img src="/img/Coffe.png" width="50px" alt=""></a>
+            <button id="start_reading_button" class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Start reading</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#trendings">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#writes">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact_us">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="get_started_button" class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Get started</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home_page" class="home_page_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="home_page_header_text_left">
+                        <h2>Stay curious</h2>
+                        <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+                        <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Start reading</button>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <p class="home_page_header_text_right fw-light">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="right_canvas">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel"><img src="/img/Coffe.png" width="50px" alt=""></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+           
+            <div class="offcanvas-body d-flex flex-column">
+                <nav>
+                    <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
+                      <button class="nav-link active w-50" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="bi bi-pencil-square"></i> Register</button>
+                      <button class="nav-link w-50" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="bi bi-person"></i> Login</button>
+                    </div>
+                </nav>
+                <div class="tab-content mt-4" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <form class="login_register_one d-flex flex-column gap-2 mt-5 text-center " action="">
+                            <label class="text-white" for="">Username:</label>
+                            <input class="register_username w-75 align-self-center" type="text">
+                            <label class="text-white" for="">Password:</label>
+                            <input class="register_password_one w-75 align-self-center" type="password">
+                            <label class="text-white" for="">Password Again:</label>
+                            <input class="register_password_two w-75 align-self-center" type="password">
+                            <button class="register_button w-50 align-self-center mt-4">Continue</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                        <form class="login_register_two d-flex flex-column gap-2 mt-5 text-center" id="login_register_two" action="">
+                            <label class="text-white" for="">Username:</label>
+                            <input class="login_username w-75 align-self-center" type="text">
+                            <label class="text-white" for="">Password:</label>
+                            <input class="login_password_one w-75 align-self-center" type="password">
+                            <label class="text-white login_password_two_label" for="">Password Again:</label>
+                            <input class="login_password_two_input w-75 align-self-center" type="password">
+                            <button class="register_button w-50 align-self-center mt-4">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trendings" class="trending_section mt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="trending_head">
+                        <p><i class="fa-solid fa-arrow-trend-up"></i> Trending on Coffe Blog</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">01</h4>
+                                <img class="profil_photo" src="/img/profil_photo1.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Toom Cooper</h6>
+                        <h5 class="blog_head text-center">Ukraine Word War</h5>
+                        <h6 class="blog_time text-center">July 15</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">02</h4>
+                                <img class="profil_photo" src="/img/profil_photo2.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Preeven Seshadri</h6>
+                        <h5 class="blog_head text-center">The maze is in the mouse</h5>
+                        <h6 class="blog_time text-center">Feb 14</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">03</h4>
+                                <img class="profil_photo" src="/img/profil_photo3.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Martin Heinz</h6>
+                        <h5 class="blog_head text-center">Use Alpine Linux Ever Again</h5>
+                        <h6 class="blog_time text-center">Mar 6</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">04</h4>
+                                <img class="profil_photo" src="/img/profil_photo4.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Chris Zubak</h6>
+                        <h5 class="blog_head text-center">Washington Post</h5>
+                        <h6 class="blog_time text-center">Feb 22</h6>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="trending_hr text-white p-2">
+
+            <div class="row">
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">05</h4>
+                                <img class="profil_photo" src="/img/profil_photo5.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">John Dea</h6>
+                        <h5 class="blog_head text-center">Come Back Syrie</h5>
+                        <h6 class="blog_time text-center">July 15</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">06</h4>
+                                <img class="profil_photo" src="/img/profil_photo6.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Buzz Aldrin</h6>
+                        <h5 class="blog_head text-center">dark side of the Moon</h5>
+                        <h6 class="blog_time text-center">Feb 14</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">07</h4>
+                                <img class="profil_photo" src="/img/profil_photo7.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Micheal Green</h6>
+                        <h5 class="blog_head text-center">The Pinnacle of Technology</h5>
+                        <h6 class="blog_time text-center">Mar 20</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 trends">
+                    <a class="trending_post" href="">
+                        <div class="row">
+                            <div class="col-12 position-relative">
+                                <h4 class="trend_number p-1">08</h4>
+                                <img class="profil_photo" src="/img/profil_photo8.jpg" alt="">
+                            </div>
+                        </div>
+                        <h6 class="profil_name mt-1 text-center">Tomy Shelby</h6>
+                        <h5 class="blog_head text-center">Web Word</h5>
+                        <h6 class="blog_time text-center">Feb 25</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blogs" class="blog_posts pt-5 pb-5">
+        <div class="container">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-around m-auto" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-social-tab" data-bs-toggle="pill" data-bs-target="#pills-social" type="button" role="tab" aria-controls="pills-social" aria-selected="true"><i class="fa-solid fa-people-arrows"></i> Social</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-art-tab" data-bs-toggle="pill" data-bs-target="#pills-art" type="button" role="tab" aria-controls="pills-art" aria-selected="false"><i class="fa-solid fa-palette"></i> Art</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-health-tab" data-bs-toggle="pill" data-bs-target="#pills-health" type="button" role="tab" aria-controls="pills-health" aria-selected="false"><i class="fa-sharp fa-solid fa-virus"></i> Health</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-food-tab" data-bs-toggle="pill" data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food" aria-selected="false"><i class="fa-solid fa-utensils"></i> Food</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-animals-tab" data-bs-toggle="pill" data-bs-target="#pills-animals" type="button" role="tab" aria-controls="pills-animals" aria-selected="false"><i class="fa-solid fa-paw"></i> Animals</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-social" role="tabpanel" aria-labelledby="pills-social-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo4.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Chris Zubak</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">How ‘Should’ Makes Us Stupid — And How to Get Smart Again</h4>
+                                                <h6 class="summary fw-light">When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</h6>
+                                                <h6 class="post_text_head_date">Feb 27</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_4.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo5.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">John Dea</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">GPT Is an Unreliable Information Store</h4>
+                                                <h6 class="summary fw-light">Understanding the limitations and dangers of large language models</h6>
+                                                <h6 class="post_text_head_date">Feb 21</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_5.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo6.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Buzz Aldrin</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">Beginning Again At Fifty-Five</h4>
+                                                <h6 class="summary fw-light">In which I attempt to calculate the remaining years of my life and plan for the final act</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_6.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo4.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Chris Zubak</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">How ‘Should’ Makes Us Stupid — And How to Get Smart Again</h4>
+                                                <h6 class="summary fw-light">When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</h6>
+                                                <h6 class="post_text_head_date">Feb 27</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_4.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo5.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">John Dea</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">GPT Is an Unreliable Information Store</h4>
+                                                <h6 class="summary fw-light">Understanding the limitations and dangers of large language models</h6>
+                                                <h6 class="post_text_head_date">Feb 21</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_5.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo6.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Buzz Aldrin</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">Beginning Again At Fifty-Five</h4>
+                                                <h6 class="summary fw-light">In which I attempt to calculate the remaining years of my life and plan for the final act</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_6.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-health" role="tabpanel" aria-labelledby="pills-health-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo4.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Chris Zubak</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">How ‘Should’ Makes Us Stupid — And How to Get Smart Again</h4>
+                                                <h6 class="summary fw-light">When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</h6>
+                                                <h6 class="post_text_head_date">Feb 27</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_4.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo5.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">John Dea</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">GPT Is an Unreliable Information Store</h4>
+                                                <h6 class="summary fw-light">Understanding the limitations and dangers of large language models</h6>
+                                                <h6 class="post_text_head_date">Feb 21</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_5.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo6.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Buzz Aldrin</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">Beginning Again At Fifty-Five</h4>
+                                                <h6 class="summary fw-light">In which I attempt to calculate the remaining years of my life and plan for the final act</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_6.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo4.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Chris Zubak</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">How ‘Should’ Makes Us Stupid — And How to Get Smart Again</h4>
+                                                <h6 class="summary fw-light">When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</h6>
+                                                <h6 class="post_text_head_date">Feb 27</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_4.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo5.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">John Dea</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">GPT Is an Unreliable Information Store</h4>
+                                                <h6 class="summary fw-light">Understanding the limitations and dangers of large language models</h6>
+                                                <h6 class="post_text_head_date">Feb 21</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_5.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo6.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Buzz Aldrin</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">Beginning Again At Fifty-Five</h4>
+                                                <h6 class="summary fw-light">In which I attempt to calculate the remaining years of my life and plan for the final act</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_6.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-animals" role="tabpanel" aria-labelledby="pills-animals-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo1.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Tom Cooper</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘Women’s history is women’s right’</h4>
+                                                <h6 class="summary fw-light">A tribute to overlooked innovators, good troublemakers, and remarkable women of the past, present, and future</h6>
+                                                <h6 class="post_text_head_date">Mar 06</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo2.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Preeven Seshadri</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">‘What We’re Reading: To meet or not to meet?’</h4>
+                                                <h6 class="summary fw-light">A few stories you may have missed this week</h6>
+                                                <h6 class="post_text_head_date">Mar 3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 blog_post mt-4">
+                                <div class="row">
+                                    <div class="col-2 subject"></div>
+                                    <div class="col-md-5">
+                                        <div class="box">
+                                            <div class="post_header d-flex align-items-center">
+                                                <img class="post_profil_picture" src="/img/profil_photo3.jpg" alt="">
+                                                <h6 class="ms-3 mb-0">Martin Heinz</h6>
+                                            </div>
+                                            <div class="post_text_head mt-2">
+                                                <h4 class="fw-bold">The art of quitting — lessons from my Ph.D. journey</h4>
+                                                <h6 class="summary fw-light">Advice Column for Graduate Students and Applicants</h6>
+                                                <h6 class="post_text_head_date">Mar 15</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 posts d-flex justify-content-center align-items-center">
+                                        <div class="post_photo_border">
+                                            <img class="post_photo" src="/img/postPhoto_3.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 blog_post_arrow"><i class="fa-solid fa-angles-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="writes" class="write p-5 text-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 experience_left ps-5">
+                    <h2 class="mb-5 mt-5"data-aos="fade-right">THE Coffe Blog EXPERIENCE. WHY NOT FOR YOU?</h2>
+                    <ul>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Here you are again. Looking at a blogging platform. You do this every so often, perhaps even signed up for one once, but it didn’t really work out.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Yet, you still have some ideas inside of you you’d like to get out. You would like to publish those thoughts and imagine people reading them. You want to be taken seriously. And you should be.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            That’s what blogging is all about. It’s thinking in complete sentences.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Blogging doesn’t need to be complicated. You want it to be straightforward and comfortable. When you have a question, you want someone to be there. So do we.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Silvrback is a well-supported platform hosting a small community of writers. It’s more personal. We measure users in the hundreds, not millions.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            We’re a small team who wants to do our part to help you succeed.
+                        </li>
+                        <li class="experience_left_item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Look, we’d like to present your work to the world. Let us help you get started.
+                        </li>
+                        <li class="experience_left_item">
+                            <button class="btn btn-light experience_left_item_button text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Start reading</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 experience_right">
+                    <img class="experience_right_img mt-5" src="/img/experience-background_4.png" alt="" data-aos="fade-up"
+                    data-aos-duration="2000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="membership">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="membership_head"data-aos="flip-right" data-aos-offset="300">
+                        <h2 class="text-center">Fuel great thinking.</h2>
+                        <h4 class="text-center">Become a Medium member to unlimited access and directly support the writers you most.</h4>
+                        <button class="btn experience_left_item_button text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Start reading</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="membership_middle_left" data-aos="fade-right"data-aos-offset="300">
+                        <h2>Get unlimited access to every story.</h2>
+                        <img src="/img/experience-background_3.png" alt="">
+                        <h6>Read any article in our entire library across all your devices — with no paywalls, story limits or ads.</h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="membership_middle_right"data-aos="fade-left"data-aos-offset="300">
+                        <h2>Support the voices you want to hear more from.</h2>
+                        <img src="/img/Art_2x.png" alt="" >
+                        <h6>A portion of your membership will directly support the writers and thinkers you read the most.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="membership_bottom_section p-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="membership_bottom text-white" data-aos="zoom-in"data-aos-duration="500">
+                        <h2>Why I'm a Medium Member...</h2>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 membership_bottom_photo d-flex justify-content-end align-items-center">
+                                        <img src="/img/profil_photo1.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                        <h5>"For me, the access to a variety of ideas and perspectives is invaluable. Medium brings people from all over into one shared space where we can grow and learn together." <br><br> <span>Tom Cooper</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 membership_bottom_photo d-flex justify-content-end align-items-center">
+                                        <img src="/img/profil_photo2.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                        <h5>"My favorite thing about a Medium membership is endlessly reading up-and-coming and well-known writers alike." <br><br> <span>Preeven Seshardi</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 membership_bottom_photo d-flex justify-content-end align-items-center">
+                                        <img src="/img/profil_photo3.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                        <h5>"I love Medium’s membership — it gives me access to the stories I love by the writers I love, and it allows me to help support those writers financially." <br><br> <span>Martin Heinz</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 membership_bottom_photo  d-flex justify-content-end align-items-center">
+                                        <img src="/img/profil_photo4.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                        <h5>"I love Medium’s membership — it gives me access to the stories I love by the writers I love, and it allows me to help support those writers financially." <br><br> <span>Chris Zubak</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="item"><h4>2</h4></div>
+                            <div class="item"><h4>3</h4></div>
+                            <div class="item"><h4>4</h4></div>
+                            <div class="item"><h4>5</h4></div>
+                            <div class="item"><h4>6</h4></div>
+                            <div class="item"><h4>7</h4></div>
+                            <div class="item"><h4>8</h4></div>
+                            <div class="item"><h4>9</h4></div>
+                            <div class="item"><h4>10</h4></div>
+                            <div class="item"><h4>11</h4></div>
+                            <div class="item"><h4>12</h4></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="take_section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="take_section_header">
+                        <h2>Take your mind in new directions.</h2>
+                        <h5>A blank page is also a door. At Coffe Blog you can walk through it. It's easy and free to share your thinking on any topic, connect with an audience, express yourself with a range of publishing tools, and even earn money for your work.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <div class="take_section_left mt-4">
+                        <h6 data-aos="fade-right"data-aos-duration="200">COFFE</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="400">COFFEBLOG</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="600">COFFEBLOG COFFE</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="800">COFFEBLOG COFFE COFFE</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="1000">COFFEBLOG COFFE COFFE BLOG</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="1200">COFFEBLOG COFFE COFFE BLOG COFFE</h6>
+                        <h6 data-aos="fade-right" data-aos-duration="1400">COFFEBLOG COFFE COFFE BLOG COFFE COFFE</h6>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="take_section_center">
+                        <img src="/img/Ic_trending_up_48px.svg.png" width="300px" alt="" data-aos="fade-up">
+                    </div>
+                </div>
+                
+                <div class="col-5">
+                    <div class="take_section_right text-end mt-4">
+                        <h6 data-aos="fade-left"data-aos-duration="200">COFFE</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="400">COFFEBLOG</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="600">COFFEBLOG COFFE</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="800">COFFEBLOG COFFE COFFE</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="1000">COFFEBLOG COFFE COFFE BLOG</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="1200">COFFEBLOG COFFE COFFE BLOG COFFE</h6>
+                        <h6 data-aos="fade-left"data-aos-duration="1400">COFFEBLOG COFFE COFFE BLOG COFFE COFFE</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact_us" class="text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="coffe_blog_footer d-flex justify-content-between align-items-center">
+                        <h4><i class="fa-solid fa-mug-hot"></i> Coffe Blog</h4>
+                        <h4>Every idea needs a Coffe Blog</h4>
+                        <div class="footer_help">
+                            <a class="pe-1" href="">About</a>
+                            <a class="pe-1" href="">Terms</a>
+                            <a class="pe-1" href="">Privacy</a>
+                            <a href="">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home_page" class="button_ups">
+        <button class="button_up"><i class="fa-solid fa-caret-up"></i> Yukarı Çık</button> 
+    </a>
+    
+
+
+
+    <!-- bsApp -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jqApp -->    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- owl -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- aos js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- myApp -->
+    <script src="app.js"></script>
+</body>
+</html>
