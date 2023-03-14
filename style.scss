@@ -559,6 +559,70 @@ footer{
 }
 
 
+
+// ------------------------------------------
+
+// MY_BLOG_HTML
+
+.profil_page{
+    .vertical_menu_master{
+        .profil_page_left_buttons{
+            gap: 3rem ;
+        }
+    }
+    .partition_container{
+        .home_section{
+            .home_write_box{
+                display: flex;
+                justify-content: center;
+                img{
+                    border-radius: 50%;
+                    padding-right: 1rem;
+                }
+                input{
+                    width: 75%;
+                    min-width: 300px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    padding: 1rem;
+                }
+                button{
+                    background-color: #393053;
+                    color: white;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius:10px ;
+                }
+            }
+            .streaming_blog{
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 1rem;
+                .blog_profil_post_photo{
+                    border-radius: 50%;
+                    width: 100px;
+                }
+            }
+            .post{
+                .blog_photo{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 992px) {
     #get_started_button{
         display: none;
@@ -654,13 +718,4 @@ footer{
 }
 
 
-// ------------------------------------------
 
-// MY_BLOG_HTML
-
-.nav_main{
-    .nav_main_profil_mini_photo{
-        border: 2px solid black;
-        border-radius: 50%;
-    }
-}

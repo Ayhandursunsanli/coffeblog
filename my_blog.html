@@ -18,41 +18,80 @@
 </head>
 <body>
 
-    <nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="nav nav-tabs nav_main" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profil</button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Home</button>
-                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Write</button>
-                        <div class="dropdown">
-                            <img class="nav_main_profil_mini_photo" src="/img/profil_photo1.jpg" alt="" width="40px"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+            <a class="navbar-brand text-white" href="#"><img src="/img/Coffe.png" width="50px" alt=""></a>
+            <button id="start_reading_button" class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Start reading</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="">Tom Cooper</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-white" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#writes">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact_us">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="get_started_button" class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Get started</button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="profil_page">      
+        <div class="d-flex align-items-start vertical_menu_master">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nav flex-column nav-pills me-3 profil_page_left_buttons" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="tab-content partition_container" id="v-pills-tabContent ">
+                            <div class="tab-pane fade show active home_section" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                                <h2>Home</h2>
+                                <div class="home_write_box">
+                                    <img src="/img/profil_photo1.jpg" alt="" width="100px">
+                                    <input type="text" placeholder="Write your thoughts...">
+                                    <button>Publish</button>
+                                </div>
+                                <div class="streaming_blog mt-5">
+                                    <img class="blog_profil_post_photo" src="/img/profil_photo1.jpg" alt="">
+                                    <span class="blog_text">Toom Cooper</span>
+                                    <div class="post">
+                                        <p class="blog">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quia unde harum itaque pariatur rerum 
+                                        </p>
+                                        <img class="blog_photo" src="/img/postPhoto_1.webp" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade profil_section" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade messages_section" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade settings_section" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">Profil</div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">Home</div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">Options</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+    </section>
 
-    <footer id="contact_us" class="text-white">
+    <!-- <footer id="contact_us" class="text-white">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -69,11 +108,11 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
-    <a href="#home_page" class="button_ups">
+    <!-- <a href="#home_page" class="button_ups">
         <button class="button_up"><i class="fa-solid fa-caret-up"></i> Yukarı Çık</button> 
-    </a>
+    </a> -->
     
 
 
