@@ -485,7 +485,17 @@ footer .coffe_blog_footer .footer_help a:hover {
 }
 
 .profil_page .vertical_menu_master .profil_page_left_buttons {
+  margin-top: 4rem;
   gap: 3rem;
+}
+.profil_page .vertical_menu_master .profil_page_left_buttons button {
+  background-color: #393053;
+  color: white;
+  border-radius: 20px;
+}
+.profil_page .vertical_menu_master .profil_page_left_buttons .nav-link.active {
+  color: white;
+  background-color: crimson;
 }
 .profil_page .partition_container .home_section .home_write_box {
   display: flex;
@@ -517,8 +527,58 @@ footer .coffe_blog_footer .footer_help a:hover {
   border-radius: 50%;
   width: 100px;
 }
+.profil_page .partition_container .home_section .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .profil_page .partition_container .home_section .post .blog_photo {
   width: 300px;
+}
+.profil_page .profil_page_right_section {
+  margin-top: 3rem;
+}
+.profil_page .profil_page_right_section form .btn-outline-success {
+  border: none;
+  color: black;
+}
+.profil_page .profil_page_right_section form .btn-outline-success:hover {
+  background-color: white;
+  color: crimson;
+}
+.profil_page .profil_page_right_section .agenda {
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: #ececec;
+  padding: 1rem;
+}
+.profil_page .profil_page_right_section .agenda .aganda_head {
+  font-weight: bold;
+}
+.profil_page .profil_page_right_section .agenda ul {
+  padding-left: 0;
+}
+.profil_page .profil_page_right_section .agenda ul li {
+  list-style-type: none;
+  padding: 0.5rem;
+}
+.profil_page .profil_page_right_section .agenda ul li a {
+  text-decoration: none;
+}
+.profil_page .profil_page_right_section .agenda ul li a h6 {
+  font-size: small;
+  font-weight: lighter;
+  color: gray;
+}
+.profil_page .profil_page_right_section .agenda ul li a h5 {
+  color: black;
+  font-weight: bold;
+  font-size: small;
+}
+.profil_page .profil_page_right_section .agenda ul li:hover {
+  background-color: #d7d7d7;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 992px) {

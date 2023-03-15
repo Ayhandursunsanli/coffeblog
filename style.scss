@@ -567,7 +567,18 @@ footer{
 .profil_page{
     .vertical_menu_master{
         .profil_page_left_buttons{
+            margin-top: 4rem;
             gap: 3rem ;
+            button{
+                background-color:#393053;
+                color: white;
+                border-radius: 20px;
+            
+            }
+            .nav-link.active{
+                color:white;
+                background-color:crimson;
+            }
         }
     }
     .partition_container{
@@ -603,8 +614,58 @@ footer{
                 }
             }
             .post{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 .blog_photo{
                     width: 300px;
+                }
+            }
+        }
+    }
+    .profil_page_right_section{
+        margin-top: 3rem;
+        form{
+            .btn-outline-success{
+                border: none;
+                color: black;
+            }
+            .btn-outline-success:hover{
+                background-color: white;
+                color: crimson;
+            }
+        }
+        .agenda{
+            margin-top: 1rem;
+            border-radius: 10px;
+            background-color: #ececec;
+            padding: 1rem;
+            .aganda_head{
+                font-weight: bold;
+            }
+            ul{
+                padding-left: 0;
+                li{
+                    list-style-type: none;
+                    padding: .5rem;
+                    a{
+                        text-decoration: none;
+                        h6{
+                            font-size: small;
+                            font-weight: lighter;
+                            color: gray;
+                        }
+                        h5{
+                            color: black;
+                            font-weight: bold;
+                            font-size: small;
+                        }
+                    }
+                }
+                li:hover{
+                    background-color: #d7d7d7;
+                    border-radius: 10px;
                 }
             }
         }
