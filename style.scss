@@ -567,13 +567,19 @@ footer{
 .profil_page{
     .vertical_menu_master{
         .profil_page_left_buttons{
+            position:fixed;
             margin-top: 4rem;
-            gap: 3rem ;
+            gap: 1.5rem ;
             button{
-                background-color:#393053;
-                color: white;
+                // background-color:#393053;
+                color: black;
                 border-radius: 20px;
-            
+                text-align: start; 
+                font-size: 15px;   
+                padding: 1rem;
+            }
+            button:hover{
+                background-color:#d2d2d2 ;
             }
             .nav-link.active{
                 color:white;
@@ -581,51 +587,161 @@ footer{
             }
         }
     }
-    .partition_container{
-        .home_section{
-            .home_write_box{
-                display: flex;
-                justify-content: center;
-                img{
-                    border-radius: 50%;
-                    padding-right: 1rem;
+
+    .partition_col{
+        border-left: 1px solid #d2d2d2;
+        border-right: 1px solid #d2d2d2;
+        .partition_container{
+            .home_section{
+                .home_head{
+                    margin-bottom: 0;
                 }
-                input{
-                    width: 75%;
-                    min-width: 300px;
-                    border-top-left-radius: 10px;
-                    border-bottom-left-radius: 10px;
-                    padding: 1rem;
+                .home_write_box{
+                    margin-top: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    img{
+                        border-radius: 50%;
+                        padding-right: 1rem;
+                    }
+                    input{
+                        width: 75%;
+                        min-width: 300px;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        padding: 1rem;
+                    }
+                    button{
+                        background-color: #393053;
+                        color: white;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius:10px ;
+                    }
+                    .media{
+                        position: absolute;
+                        bottom: -30px;
+                        right: 12%;
+                        i{
+                            cursor: pointer;
+                            font-size: 18px;
+                            
+                        }
+                        i:hover{
+                            color: crimson;
+                            scale: 1.2;
+                        }
+                    }
                 }
-                button{
-                    background-color: #393053;
-                    color: white;
-                    border-top-right-radius: 10px;
-                    border-bottom-right-radius:10px ;
+                .streaming_blog{
+                    border-top: 1px solid #d2d2d2;
+                    border-bottom: 1px solid #d2d2d2;
+                    padding: 1.5rem;
+                    cursor: pointer;
+                    .blog_profil_post_photo{
+                        border-radius: 50%;
+                        width: 100px;
+                    }
+                }
+                .streaming_blog:hover{
+                    background-color:#ededed ;
+                }
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .blog_photo{
+                        width: 300px;
+                    }
+                    .post_media_icon{
+                        i{
+                            font-size: 15px;
+                        }
+                        i:hover{
+                            color: crimson;
+                        }
+                    }
                 }
             }
-            .streaming_blog{
-                border: 2px solid black;
-                border-radius: 10px;
-                padding: 1rem;
-                .blog_profil_post_photo{
-                    border-radius: 50%;
-                    width: 100px;
+            .profil_section{
+                .home_head{
+                    margin-bottom: 0;
                 }
-            }
-            .post{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                .blog_photo{
-                    width: 300px;
+                .home_write_box{
+                    margin-top: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    img{
+                        border-radius: 50%;
+                        padding-right: 1rem;
+                    }
+                    input{
+                        width: 75%;
+                        min-width: 300px;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        padding: 1rem;
+                    }
+                    button{
+                        background-color: #393053;
+                        color: white;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius:10px ;
+                    }
+                    .media{
+                        position: absolute;
+                        bottom: -30px;
+                        right: 12%;
+                        i{
+                            cursor: pointer;
+                            font-size: 18px;
+                            
+                        }
+                        i:hover{
+                            color: crimson;
+                            scale: 1.2;
+                        }
+                    }
+                }
+                .streaming_blog{
+                    border-top: 1px solid #d2d2d2;
+                    border-bottom: 1px solid #d2d2d2;
+                    padding: 1.5rem;
+                    cursor: pointer;
+                    .blog_profil_post_photo{
+                        border-radius: 50%;
+                        width: 100px;
+                    }
+                }
+                .streaming_blog:hover{
+                    background-color:#ededed ;
+                }
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .blog_photo{
+                        width: 300px;
+                    }
+                    .post_media_icon{
+                        i{
+                            font-size: 15px;
+                        }
+                        i:hover{
+                            color: crimson;
+                        }
+                    }
                 }
             }
         }
     }
+    
     .profil_page_right_section{
         margin-top: 3rem;
+        position: fixed;
         form{
             .btn-outline-success{
                 border: none;
@@ -641,6 +757,7 @@ footer{
             border-radius: 10px;
             background-color: #ececec;
             padding: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             .aganda_head{
                 font-weight: bold;
             }
@@ -667,6 +784,13 @@ footer{
                     background-color: #d7d7d7;
                     border-radius: 10px;
                 }
+            }
+            .more_button{
+                background-color: crimson;
+                color: white;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: .3rem;
             }
         }
     }

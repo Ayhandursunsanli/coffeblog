@@ -485,59 +485,165 @@ footer .coffe_blog_footer .footer_help a:hover {
 }
 
 .profil_page .vertical_menu_master .profil_page_left_buttons {
+  position: fixed;
   margin-top: 4rem;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 .profil_page .vertical_menu_master .profil_page_left_buttons button {
-  background-color: #393053;
-  color: white;
+  color: black;
   border-radius: 20px;
+  text-align: start;
+  font-size: 15px;
+  padding: 1rem;
+}
+.profil_page .vertical_menu_master .profil_page_left_buttons button:hover {
+  background-color: #d2d2d2;
 }
 .profil_page .vertical_menu_master .profil_page_left_buttons .nav-link.active {
   color: white;
   background-color: crimson;
 }
-.profil_page .partition_container .home_section .home_write_box {
+.profil_page .partition_col {
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+}
+.profil_page .partition_col .partition_container .home_section .home_head {
+  margin-bottom: 0;
+}
+.profil_page .partition_col .partition_container .home_section .home_write_box {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
+  position: relative;
 }
-.profil_page .partition_container .home_section .home_write_box img {
+.profil_page .partition_col .partition_container .home_section .home_write_box img {
   border-radius: 50%;
   padding-right: 1rem;
 }
-.profil_page .partition_container .home_section .home_write_box input {
+.profil_page .partition_col .partition_container .home_section .home_write_box input {
   width: 75%;
   min-width: 300px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 1rem;
 }
-.profil_page .partition_container .home_section .home_write_box button {
+.profil_page .partition_col .partition_container .home_section .home_write_box button {
   background-color: #393053;
   color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.profil_page .partition_container .home_section .streaming_blog {
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 1rem;
+.profil_page .partition_col .partition_container .home_section .home_write_box .media {
+  position: absolute;
+  bottom: -30px;
+  right: 12%;
 }
-.profil_page .partition_container .home_section .streaming_blog .blog_profil_post_photo {
+.profil_page .partition_col .partition_container .home_section .home_write_box .media i {
+  cursor: pointer;
+  font-size: 18px;
+}
+.profil_page .partition_col .partition_container .home_section .home_write_box .media i:hover {
+  color: crimson;
+  scale: 1.2;
+}
+.profil_page .partition_col .partition_container .home_section .streaming_blog {
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.profil_page .partition_col .partition_container .home_section .streaming_blog .blog_profil_post_photo {
   border-radius: 50%;
   width: 100px;
 }
-.profil_page .partition_container .home_section .post {
+.profil_page .partition_col .partition_container .home_section .streaming_blog:hover {
+  background-color: #ededed;
+}
+.profil_page .partition_col .partition_container .home_section .post {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.profil_page .partition_container .home_section .post .blog_photo {
+.profil_page .partition_col .partition_container .home_section .post .blog_photo {
   width: 300px;
+}
+.profil_page .partition_col .partition_container .home_section .post .post_media_icon i {
+  font-size: 15px;
+}
+.profil_page .partition_col .partition_container .home_section .post .post_media_icon i:hover {
+  color: crimson;
+}
+.profil_page .partition_col .partition_container .profil_section .home_head {
+  margin-bottom: 0;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box img {
+  border-radius: 50%;
+  padding-right: 1rem;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box input {
+  width: 75%;
+  min-width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 1rem;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box button {
+  background-color: #393053;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box .media {
+  position: absolute;
+  bottom: -30px;
+  right: 12%;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box .media i {
+  cursor: pointer;
+  font-size: 18px;
+}
+.profil_page .partition_col .partition_container .profil_section .home_write_box .media i:hover {
+  color: crimson;
+  scale: 1.2;
+}
+.profil_page .partition_col .partition_container .profil_section .streaming_blog {
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.profil_page .partition_col .partition_container .profil_section .streaming_blog .blog_profil_post_photo {
+  border-radius: 50%;
+  width: 100px;
+}
+.profil_page .partition_col .partition_container .profil_section .streaming_blog:hover {
+  background-color: #ededed;
+}
+.profil_page .partition_col .partition_container .profil_section .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profil_page .partition_col .partition_container .profil_section .post .blog_photo {
+  width: 300px;
+}
+.profil_page .partition_col .partition_container .profil_section .post .post_media_icon i {
+  font-size: 15px;
+}
+.profil_page .partition_col .partition_container .profil_section .post .post_media_icon i:hover {
+  color: crimson;
 }
 .profil_page .profil_page_right_section {
   margin-top: 3rem;
+  position: fixed;
 }
 .profil_page .profil_page_right_section form .btn-outline-success {
   border: none;
@@ -552,6 +658,7 @@ footer .coffe_blog_footer .footer_help a:hover {
   border-radius: 10px;
   background-color: #ececec;
   padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .profil_page .profil_page_right_section .agenda .aganda_head {
   font-weight: bold;
@@ -579,6 +686,13 @@ footer .coffe_blog_footer .footer_help a:hover {
 .profil_page .profil_page_right_section .agenda ul li:hover {
   background-color: #d7d7d7;
   border-radius: 10px;
+}
+.profil_page .profil_page_right_section .agenda .more_button {
+  background-color: crimson;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.3rem;
 }
 
 @media screen and (max-width: 992px) {
