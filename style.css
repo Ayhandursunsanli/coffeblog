@@ -577,8 +577,41 @@ footer .coffe_blog_footer .footer_help a:hover {
 .profil_page .partition_col .partition_container .profil_section .home_head {
   margin-bottom: 0;
 }
+.profil_page .partition_col .partition_container .profil_section .information_profile {
+  position: relative;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .profil_header_backround {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .profil_header_backround img {
+  max-width: 100%;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .profile_photo_main {
+  position: absolute;
+  bottom: 90px;
+  left: 20px;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .profile_photo_main .profile_photo {
+  width: 150px;
+  border-radius: 50%;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .edit_information {
+  display: flex;
+  justify-content: end;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .edit_information .edit_btn {
+  padding: 0.4rem;
+  background-color: white;
+  border-radius: 30px;
+  color: black;
+}
+.profil_page .partition_col .partition_container .profil_section .information_profile .edit_information .edit_btn:hover {
+  background-color: #ededed;
+}
 .profil_page .partition_col .partition_container .profil_section .home_write_box {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   position: relative;

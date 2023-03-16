@@ -668,8 +668,41 @@ footer{
                 .home_head{
                     margin-bottom: 0;
                 }
+                .information_profile{
+                    position: relative;
+                    .profil_header_backround{
+                        width: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    .profile_photo_main{
+                        position: absolute;
+                        bottom: 90px;
+                        left: 20px;
+                        .profile_photo{
+                            width: 150px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .edit_information{
+                        display: flex;
+                        justify-content: end;
+                        .edit_btn{
+                            padding: .4rem;
+                            background-color:white;
+                            border-radius: 30px;
+                            color: black;
+                        }
+                        .edit_btn:hover{
+                            background-color: #ededed;
+                        }
+                    }
+                }
                 .home_write_box{
-                    margin-top: 3rem;
+                    margin-top: 5rem;
                     display: flex;
                     justify-content: center;
                     position: relative;
